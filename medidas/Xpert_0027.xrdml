@@ -10,7 +10,7 @@
 	</comment>
 	<sample type="To be analyzed">
 		<id>1205</id>
-		<name>ARR305D001</name>
+		<name>HP002D001</name>
 		<preparedBy></preparedBy>
 	</sample>
 	<xrdMeasurement measurementType="Scan" status="Completed" sampleMode="Reflection">
