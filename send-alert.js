@@ -2,16 +2,16 @@
 const mysql = require('mysql');
 const sendEmail = require('./send-email.js');
 
-module.exports.sendAlert = (amostra) => {
+module.exports.sendAlert = (amostra, params) => {
 	let numero = null;
 
 	//Para o sistema acadêmico
 	const connectionAc = mysql.createConnection({
-	  host     : 'localhost',
-	  user     : 'root',
-	  password : '',
-	  database : 'raiosx2',
-	  port: 3306
+	  host     : process.env.DB_HOST,
+	  user     : process.env.DB_USER,
+	  password : process.env.DB_PASSWORD,
+	  database : process.env.DB_AC_DATABASE,
+	  port: process.env.DB_PORT
 	});
 
 	const query = 'SELECT u.id_usuario, u.nome, u.email, u.telefone, sa.id_solicitacao, sa.id_usuario, s.identificacao_da_amostra, s.id_solicitacao FROM usuarios as u, solicitacoes_academicas as sa, solicitacoes as s WHERE s.identificacao_da_amostra = "'+amostra+'" AND s.id_solicitacao = sa.id_solicitacao AND sa.id_usuario = u.id_usuario;';
@@ -30,7 +30,9 @@ module.exports.sendAlert = (amostra) => {
 		  //numero = result.telefone;
 
 		  //Enviar o email aqui.
-		  sendEmail.sendEmail(result[0]);
+		  sendEmail.sendEmail(result[0], params);
+	  }else{
+	  	console.log("Nada encontrado")
 	  }
 	});
 	
@@ -38,11 +40,11 @@ module.exports.sendAlert = (amostra) => {
 
 	//Para o sistema Empresa
 	const connectionEm = mysql.createConnection({
-	  host     : 'localhost',
-	  user     : 'root',
-	  password : '',
-	  database : 'empresa_raiox',
-	  port: 3306
+	  host     : process.env.DB_HOST,
+	  user     : process.env.DB_USER,
+	  password : process.env.DB_PASSWORD,
+	  database : process.env.DB_EM_DATABASE,
+	  port: process.env.DB_PORT
 	});
 
 	const queryEm = 'SELECT u.id, u.email, u.nome, u.telefone, s.id_solicitacao, s.identificacao_da_amostra, sc.id_solicitacao, sc.id_usuario FROM solicitacoes_comerciais as sc, solicitacoes as s, usuarios_comerciais as u WHERE s.identificacao_da_amostra = "'+amostra+'" AND s.id_solicitacao = sc.id_solicitacao AND u.id = sc.id_usuario;';
@@ -61,7 +63,7 @@ module.exports.sendAlert = (amostra) => {
 		  //numero = resultEm.telefone;
 
 		  //Enviar o email aqui.
-		  sendEmail.sendEmail(resultEm[0]);
+		  sendEmail.sendEmail(resultEm[0], params);
 	  }
 	});
 	

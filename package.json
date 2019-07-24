@@ -1,16 +1,19 @@
 {
-  "name": "fs-node",
+  "name": "observador",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"NODE_ENV=test node server.js",
+    "start":"node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dateformat": "^3.0.3",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "http": "0.0.0",
     "mysql": "^2.17.1",
