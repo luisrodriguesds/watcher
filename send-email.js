@@ -14,10 +14,11 @@ module.exports.sendEmail = (result, params)=>{
 	const assunto = '[LRX] Análise Solicitada por '+result.nome;
 	let   corpo = '<p>Olá '+result.nome+',<br> O Sistema de Medida DRX do Laboratório de Raios-X da UFC';
 		  corpo+= 'detectou que sua amostra, identificada como '+result.identificacao_da_amostra+', teve inicío neste exato momento, '+dateFormat(new Date(), "dd/mm/yyyy HH:MM:ss");+'.</p>';
-		  corpo+= '<p> Para acompanhar sua medida, basta acessar o link a baixo. </p>';
+		  corpo+= '<p> Para acompanhar sua medida, basta acessar o link abaixo. </p>';
 		  corpo+= '<p><a href="http://csd.fisica.ufc.br:8080/sample?filename='+params.filename+'&year='+params.year+'" target="_blank">Sistema de Medida DRX em Tempo Real</a></p>';
 		  corpo+= '<p>Para acompanhar as etapas de todas as suas amostras entre com seu login e senha em <br> </p>';
 		  corpo+= '<p><a href="http://csd.fisica.ufc.br" target="_blank">Sistema de Multiusuários</a></p>';
+		  corpo+= '<p style="color:red;">Para ter acesso ao resultado da sua medida basta ao final da análise recolher a sua amostra no laboratório</p>';
 		  corpo+= '<p style="text-align:right;">Atenciosamente, <br>Laboratório de Raios-X</p>';
 		  corpo+= '<p>Caso possua alguma dúvida, por favor entre em contato com o Laboratório ';
 		  corpo+= 'por meio do endereço de email lrxufc@gmail.com, ou pelo telefone 85 33669917.</p>';
