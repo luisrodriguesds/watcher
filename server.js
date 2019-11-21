@@ -1,19 +1,17 @@
 const fs 	= require('fs');
 const path 	= require('path');
 const parser= require('xml2json-light');
-const send 	= require('./send-alert.js');
-const year = '2019';
+const {sendAlert} 	= require('./send-alert.js');
+const {sendDownload}= require('./send-download.js');
+const year = '2019'; //Para saber qual ano\pasta será observada
 const dot = require('dotenv').config({  
   path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
-});
+}); //Para rodar com a .env de ambiente - NODE_ENV=test node server.js
 
-//const dir 	= __dirname+'\\medidas\\';
-// const dir 	= __dirname+'/medidas/';
-const _dir = '/run/user/1000/gvfs/smb-share:server=10.2.192.201,share=medidas%20drx%20panalytical/'; 
-const dir = _dir+'2019/';
-
+const dir = process.env.FOLDER_PATH; 
 let lastFile ='';
 
+//Função para pegar o último arquivo
 function getLatestFile({directory, extension}, callback){
   fs.readdir(directory, (_ , dirlist)=>{
     const latest = dirlist.map(_path => ({stat:fs.lstatSync(path.join(directory, _path)), dir:_path}))
@@ -34,7 +32,8 @@ getLatestFile({directory:dir, extension:'xrdml'}, (filename=null)=>{
 setInterval(() => {
 	getLatestFile({directory:dir, extension:'xrdml'}, (filename=null)=>{
 		if (lastFile != filename) {
-			//Get the file
+			
+			//Pega o atual e manda email para o dono da amostra dizendo que está sendo analisada
 			fs.readFile(dir+filename, 'utf-8', (err, data) =>{
 				//Converte para json
 				let currentFile = parser.xml2json(data);
@@ -43,14 +42,18 @@ setInterval(() => {
 				let currentSampleName = currentFile.xrdMeasurements.sample.name;
 				
 				//Para a funcao que irá enviar o email e a mensagem via wpp - ascincrono
-				send.sendAlert(currentSampleName, {filename, year});
-			});			
+				sendAlert(currentSampleName, {filename, year});
 
+			});
 			console.log("Trocou o arquivo");
+
+			//Enviar arquivo concluído para a pasta de download (Pegar arquivo, mudar nome e mudar) 
+			sendDownload({lastFile});
+
 			lastFile = filename;
 		}else{
 			lastFile = filename;
 		}
   		console.log(filename);
 	});
-}, 10000);
+}, 1000);

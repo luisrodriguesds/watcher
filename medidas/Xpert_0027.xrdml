@@ -9,8 +9,8 @@
 		<entry>Measurement program=Program1, Owner=User-1, Creation date=2/16/2009 4:29:48 PM</entry>
 	</comment>
 	<sample type="To be analyzed">
-		<id>1205</id>
-		<name>HP002D001</name>
+		<id>1205</id> 
+		<name>LIA431D002</name>
 		<preparedBy></preparedBy>
 	</sample>
 	<xrdMeasurement measurementType="Scan" status="Completed" sampleMode="Reflection">
