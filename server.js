@@ -32,7 +32,6 @@ getLatestFile({directory:dir, extension:'xrdml'}, (filename=null)=>{
 setInterval(() => {
 	getLatestFile({directory:dir, extension:'xrdml'}, (filename=null)=>{
 		if (lastFile != filename) {
-			
 			//Pega o atual e manda email para o dono da amostra dizendo que está sendo analisada
 			fs.readFile(dir+filename, 'utf-8', (err, data) =>{
 				//Converte para json
@@ -45,7 +44,7 @@ setInterval(() => {
 				sendAlert(currentSampleName, {filename, year});
 
 			});
-			console.log("Trocou o arquivo");
+			console.log("o arquivo", filename, " foi alterado");
 
 			//Enviar arquivo concluído para a pasta de download (Pegar arquivo, mudar nome e mudar) 
 			sendDownload({lastFile});
