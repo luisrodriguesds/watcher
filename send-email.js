@@ -42,8 +42,33 @@ module.exports = {
 		});
 	},
 
-	async sendEmail(result, params){
+	async sendEmailFinal(result, params){
+		//Assuno e Corpo da mensagem
+		const assunto = '[SLRX] Término da análise Solicitada por '+result.u_name;
+		let   corpo = '<p>Olá '+result.u_name+',<br> O Sistema de Medida DRX do Laboratório de Raios-X da UFC';
+			  corpo+= 'detectou o termino do processo de medida DRX da sua amostra, identificada como '+result.name+'.</p>';
+			  corpo+= '<p>Para relizar o download da sua medida entre com seu login e senha em <br> </p>';
+			  corpo+= '<p><a href="http://csd.fisica.ufc.br:3000" target="_blank">Sistema LRX</a></p>';
+			  corpo+= '<p><storng>Porém, o download da sua medida só será liberado mediante da retirada da sua amostra do LRX ou mediante a expressa comunicação do discarte da sua amostra enviando para lrxufc@gmail.com. </strong></p>';
+			  corpo+= '<p style="text-align:right;">Atenciosamente, <br>Laboratório de Raios-X</p>';
+			  corpo+= '<p>Caso possua alguma dúvida, por favor entre em contato com o Laboratório ';
+			  corpo+= 'por meio do endereço de email lrxufc@gmail.com, ou pelo telefone 85 33669917.</p>';
 		
+		const email = result.email;
+
+		//Dados a serem enviados
+		const data = {assunto, corpo, email};
+
+		//dados do post
+		const op = {
+			url:'http://csdint.fisica.ufc.br/solicitacoes/send-email.php',
+			form: {email:JSON.stringify(data)}
+		};
+
+		//Envia o post para mandar o email
+		request.post(op, (err,httpResponse,body) =>{ 
+			console.log(body);
+		});
 	}
 	 
 }

@@ -49,7 +49,7 @@ module.exports = {
 		        	console.log("Log de send-download \n", result);
 					
 					//Enviar o email aqui dizendo que a amostra questá pronta para o recolhimento
-					//sendEmail(result[0], params);
+					sendEmailFinal(result[0]);
 			    })
 		    })
 			

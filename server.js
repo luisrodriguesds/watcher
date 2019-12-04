@@ -55,4 +55,4 @@ setInterval(() => {
 		}
   		console.log(filename);
 	});
-}, 1000);
+}, 5000);
