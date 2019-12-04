@@ -42,7 +42,7 @@ module.exports = {
 		});
 	},
 
-	async sendEmailFinal(result, params){
+	async sendEmailFinal(result){
 		//Assuno e Corpo da mensagem
 		const assunto = '[SLRX] Término da análise Solicitada por '+result.u_name;
 		let   corpo = '<p>Olá '+result.u_name+',<br> O Sistema de Medida DRX do Laboratório de Raios-X da UFC';
@@ -55,6 +55,33 @@ module.exports = {
 			  corpo+= 'por meio do endereço de email lrxufc@gmail.com, ou pelo telefone 85 33669917.</p>';
 		
 		const email = result.email;
+
+		//Dados a serem enviados
+		const data = {assunto, corpo, email};
+
+		//dados do post
+		const op = {
+			url:'http://csdint.fisica.ufc.br/solicitacoes/send-email.php',
+			form: {email:JSON.stringify(data)}
+		};
+
+		//Envia o post para mandar o email
+		request.post(op, (err,httpResponse,body) =>{ 
+			console.log(body);
+		});
+	},
+
+	async sendEmailNotFound(name){
+		//Assuno e Corpo da mensagem
+		const assunto = '[SLRX] Amostra não encontrada';
+		let   corpo = '<p>Olá Professor! <br> O Sistema de Medida DRX do Laboratório de Raios-X da UFC';
+			  corpo+= 'detectou que a amostra '+name+' não foi encontrada na base de dados.</p>';
+			  
+			  corpo+= '<p style="text-align:right;">Atenciosamente, <br>Laboratório de Raios-X</p>';
+			  corpo+= '<p>Caso possua alguma dúvida, por favor entre em contato com o Laboratório ';
+			  corpo+= 'por meio do endereço de email lrxufc@gmail.com, ou pelo telefone 85 33669917.</p>';
+		
+		const email = process.env.EMAIL;
 
 		//Dados a serem enviados
 		const data = {assunto, corpo, email};

@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const {sendEmail} = require('./send-email.js');
+const {sendEmail, sendEmailNotFound} = require('./send-email.js');
 const knex  = require('./connection.js');
 
 module.exports = {
@@ -14,6 +14,7 @@ module.exports = {
 			 	// sendEmail(result[0], params);
 			 	console.log("Log de send-alert \n", result);
 			}else{
+				sendEmailNotFound(amostra);
 			  	console.log(amostra ,"Não foi encontrada");
 			}
 		})
