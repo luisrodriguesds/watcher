@@ -1,0 +1,23 @@
+	CLD415F001	2020- 2- 7 10:56	11	1
+	Al2O3	mass%	113	14.613
+	SiO2	mass%	114	64.393
+	P2O5	mass%	115	0.4063
+	Cl	mass%	17	0.0469
+	K2O	mass%	119	1.6572
+	CaO	mass%	120	2.2915
+	TiO2	mass%	122	5.9726
+	MnO	mass%	125	0.1824
+	Fe2O3	mass%	126	9.6092
+	ZnO	mass%	130	0.1075
+	ZrO2	mass%	140	0.7200
+	CLD415F002	2020- 2- 7 11:27	10	1
+	Al2O3	mass%	113	14.575
+	SiO2	mass%	114	63.563
+	P2O5	mass%	115	0.4701
+	K2O	mass%	119	1.7218
+	CaO	mass%	120	2.2513
+	TiO2	mass%	122	4.9232
+	MnO	mass%	125	0.2047
+	Fe2O3	mass%	126	10.613
+	ZnO	mass%	130	0.1130
+	ZrO2	mass%	140	1.5648

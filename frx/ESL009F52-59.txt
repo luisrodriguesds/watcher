@@ -1,0 +1,86 @@
+	ESL009F052	2020- 1-24 14:55	7	1
+	Na	mass%	11	5.4642
+	Al	mass%	13	0.2015
+	Cl	mass%	17	1.4234
+	K	mass%	19	0.0841
+	Ca	mass%	20	0.1303
+	Zn	mass%	30	92.620
+	Ga	mass%	31	0.0762
+	ESL009F053	2020- 1-24 15:26	10	1
+	Al	mass%	13	0.4534
+	Si	mass%	14	0.6026
+	Cl	mass%	17	0.7621
+	K	mass%	19	0.0428
+	Ca	mass%	20	0.4669
+	Mn	mass%	25	61.498
+	Fe	mass%	26	27.985
+	Cu	mass%	29	0.0812
+	Zn	mass%	30	2.5366
+	Pb	mass%	82	5.5718
+	ESL009F054	2020- 1-24 15:57	15	1
+	Al	mass%	13	27.612
+	Si	mass%	14	23.467
+	S	mass%	16	0.2905
+	Cl	mass%	17	0.8203
+	K	mass%	19	0.5826
+	Ca	mass%	20	5.3434
+	Cr	mass%	24	0.5043
+	Mn	mass%	25	5.3405
+	Fe	mass%	26	18.171
+	Ni	mass%	28	0.3047
+	Cu	mass%	29	0.3325
+	Zn	mass%	30	14.457
+	Se	mass%	34	0.4907
+	Zr	mass%	40	0.1067
+	Nb	mass%	41	2.1777
+	ESL009F055	2020- 1-24 16:28	8	1
+	Al	mass%	13	2.8935
+	Si	mass%	14	0.3652
+	S	mass%	16	37.252
+	K	mass%	19	0.1324
+	Ca	mass%	20	0.2984
+	Mn	mass%	25	2.0810
+	Fe	mass%	26	56.889
+	Nb	mass%	41	0.0887
+	ESL009F056	2020- 1-24 16:59	9	1
+	Mg	mass%	12	0.8711
+	Si	mass%	14	0.1865
+	Cl	mass%	17	0.0447
+	Ca	mass%	20	0.0777
+	Mn	mass%	25	73.897
+	Fe	mass%	26	2.9466
+	Cu	mass%	29	2.1762
+	Zn	mass%	30	19.518
+	Ta	mass%	73	0.2825
+	ESL009F057	2020- 1-24 17:30	11	1
+	Mg	mass%	12	3.0082
+	Al	mass%	13	1.5141
+	S	mass%	16	0.1436
+	Cl	mass%	17	0.3554
+	Ca	mass%	20	1.1907
+	Mn	mass%	25	28.403
+	Fe	mass%	26	63.434
+	Zn	mass%	30	0.1724
+	Ge	mass%	32	0.0576
+	Nb	mass%	41	0.8778
+	Pb	mass%	82	0.8435
+	ESL009F058	2020- 1-24 18:01	7	1
+	Mg	mass%	12	3.8900
+	Al	mass%	13	0.2957
+	Ca	mass%	20	0.1041
+	Mn	mass%	25	83.428
+	Fe	mass%	26	5.4633
+	Cu	mass%	29	0.2874
+	Zn	mass%	30	6.5310
+	ESL009F059	2020- 1-24 18:32	11	1
+	Mg	mass%	12	1.3384
+	Al	mass%	13	3.7007
+	Si	mass%	14	33.000
+	Cl	mass%	17	5.2142
+	Ca	mass%	20	1.2250
+	Mn	mass%	25	21.048
+	Fe	mass%	26	20.877
+	Cu	mass%	29	0.1498
+	Zn	mass%	30	0.9472
+	Nb	mass%	41	0.1552
+	Pb	mass%	82	12.344

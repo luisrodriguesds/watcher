@@ -1,0 +1,13 @@
+	KMD382F009	2020- 1-14 14:20	12	1
+	Na	mass%	11	5.3044
+	Al	mass%	13	2.3122
+	Si	mass%	14	21.836
+	S	mass%	16	0.9623
+	K	mass%	19	0.8941
+	Ca	mass%	20	64.167
+	Mn	mass%	25	0.4534
+	Fe	mass%	26	3.1292
+	Rb	mass%	37	0.0891
+	Sr	mass%	38	0.2456
+	Ag	mass%	47	0.2196
+	Cd	mass%	48	0.3873

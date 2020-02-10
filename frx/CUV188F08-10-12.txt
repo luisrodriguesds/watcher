@@ -1,0 +1,41 @@
+	CUV188F008	2020- 1-14 11:13	10	1
+	Al2O3	mass%	113	5.0476
+	SiO2	mass%	114	83.765
+	P2O5	mass%	115	0.7750
+	SO3	mass%	116	0.4202
+	Cl	mass%	17	0.2941
+	K2O	mass%	119	1.3232
+	CaO	mass%	120	1.0027
+	TiO2	mass%	122	4.0641
+	Fe2O3	mass%	126	3.0141
+	ZrO2	mass%	140	0.2946
+	CUV188F010	2020- 1-14 11:44	10	1
+	Al2O3	mass%	113	7.8407
+	SiO2	mass%	114	83.157
+	P2O5	mass%	115	0.7917
+	SO3	mass%	116	0.5121
+	Cl	mass%	17	0.1386
+	K2O	mass%	119	1.1072
+	CaO	mass%	120	0.8822
+	TiO2	mass%	122	3.0287
+	Fe2O3	mass%	126	2.4524
+	ZrO2	mass%	140	0.0896
+	CUV188F011	2020- 1-14 12:16	7	1
+	Al2O3	mass%	113	8.3329
+	SiO2	mass%	114	84.779
+	K2O	mass%	119	0.9013
+	CaO	mass%	120	0.4917
+	TiO2	mass%	122	3.5992
+	Fe2O3	mass%	126	1.7199
+	ZrO2	mass%	140	0.1759
+	CUV188F012	2020- 1-14 12:47	10	1
+	Al2O3	mass%	113	8.7323
+	SiO2	mass%	114	81.693
+	P2O5	mass%	115	0.7690
+	SO3	mass%	116	0.6861
+	Cl	mass%	17	0.1240
+	K2O	mass%	119	0.9151
+	CaO	mass%	120	0.8038
+	TiO2	mass%	122	3.3395
+	Fe2O3	mass%	126	2.7927
+	ZrO2	mass%	140	0.1448
