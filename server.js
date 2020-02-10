@@ -3,7 +3,7 @@ const path 	= require('path');
 const parser= require('xml2json-light');
 const {sendAlert} 	= require('./send-alert.js');
 const {sendDownload}= require('./send-download.js');
-const year = '2019'; //Para saber qual ano\pasta será observada
+const year = '2020'; //Para saber qual ano\pasta será observada
 const dot = require('dotenv').config({  
   path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
 }); //Para rodar com a .env de ambiente - NODE_ENV=test node server.js
