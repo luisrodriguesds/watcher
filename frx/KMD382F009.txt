@@ -10,4 +10,4 @@
 	Rb	mass%	37	0.0891
 	Sr	mass%	38	0.2456
 	Ag	mass%	47	0.2196
-	Cd	mass%	48	0.3873
+	Cd	mass%	48	0.3873 
